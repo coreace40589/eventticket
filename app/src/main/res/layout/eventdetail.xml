@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/images1"
+        android:scaleType="center"
+        android:id="@+id/eventposter" />
+
+        <TextView
+            android:id="@+id/eventdetail_eventname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="eventName"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp" />
+
+        <TextView
+            android:id="@+id/eventdetail_eventdate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="eventDate"
+            android:paddingTop="5dp"
+            android:paddingLeft="15dp" />
+
+        <TextView
+            android:id="@+id/eventdetail_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="address"
+            android:paddingTop="5dp"
+            android:paddingLeft="15dp"
+             />
+
+        <TextView
+            android:id="@+id/eventdetail_category"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="category"
+            android:paddingTop="5dp"
+            android:paddingLeft="15dp"
+             />
+
+        <TextView
+            android:id="@+id/eventdetail_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="eventDescription"
+            android:paddingTop="40dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="40dp"
+             />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAPS"
+            android:id="@+id/map_location"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/join_event"
+            android:layout_marginEnd="39dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOIN +"
+            android:id="@+id/join_event"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="81dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

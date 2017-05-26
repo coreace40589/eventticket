@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "948005603324",
+    "firebase_url": "https://eventticket-fe2ec.firebaseio.com",
+    "project_id": "eventticket-fe2ec",
+    "storage_bucket": "eventticket-fe2ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948005603324:android:6523cd2b0fc32b07",
+        "android_client_info": {
+          "package_name": "com.example.userpc.eventticket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948005603324-pqh0i8ctuabhdpga55ofie90a7v44baf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ21usfss1NnO-73ZJ97gorSAq-p1GoIg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
