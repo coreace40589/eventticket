@@ -19,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Eventdetail extends AppCompatActivity {
     //DatabaseReference eventref= FirebaseDatabase.getInstance().getReference().child("Events");
     DatabaseReference eventref= FirebaseDatabase.getInstance().getReference("Events");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,25 +28,25 @@ public class Eventdetail extends AppCompatActivity {
         Intent intent = getIntent();
         String eventId = intent.getStringExtra("ID");
         Log.d("EVENT ID",""+eventId);
-//
-//        final TextView eventNameTxt = (TextView)findViewById(R.id.eventdetail_eventname);
-//        final TextView eventDateTxt = (TextView)findViewById(R.id.eventdetail_eventdate);
-//
-//        eventref.child(eventId).addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                Events eventdata = dataSnapshot.getValue(Events.class);
-//                String eventname = eventdata.getEventname();
-//                String eventdate = eventdata.getEventdate();
-//
-//                eventNameTxt.setText("Event Name : "+eventname);
-//                eventDateTxt.setText("Date : "+eventdate);
-//            }
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                Log.d("","Data not Exist/Error :"+databaseError);
-//            }
-//        });
+
+        final TextView eventNameTxt = (TextView)findViewById(R.id.eventdetail_eventname);
+        final TextView eventDateTxt = (TextView)findViewById(R.id.eventdetail_eventdate);
+
+        eventref.child(eventId).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Events eventdata = dataSnapshot.getValue(Events.class);
+                String eventname = eventdata.getEventname();
+                String eventdate = eventdata.getEventdate();
+
+                eventNameTxt.setText("Event Name : "+eventname);
+                eventDateTxt.setText("Date : "+eventdate);
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.d("","Data not Exist/Error :"+databaseError);
+            }
+        });
     }
 
 

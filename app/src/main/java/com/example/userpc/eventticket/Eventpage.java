@@ -35,24 +35,26 @@ import java.util.List;
 
 public class Eventpage extends Fragment{
 
-    DatabaseReference eventref= FirebaseDatabase.getInstance().getReference().child("Events");
+    DatabaseReference eventref= FirebaseDatabase.getInstance().getReference();
     private RecyclerView event_list;
     FirebaseRecyclerAdapter<Events,EventHolder> firebaseRecycleAdapter;
-
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         final View rootView = inflater.inflate(R.layout.eventpage  , container, false);
+
         event_list = (RecyclerView)  rootView.findViewById(R.id.event_list);
         event_list.setHasFixedSize(true);
         event_list.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
-        firebaseRecycleAdapter = new FirebaseRecyclerAdapter<Events, EventHolder>(Events.class, R.layout.eventlist, EventHolder.class,eventref){
+
+        firebaseRecycleAdapter = new FirebaseRecyclerAdapter<Events, EventHolder>(Events.class, R.layout.eventlist, EventHolder.class,eventref.child("Events")){
             @Override
             protected void populateViewHolder(EventHolder viewHolder, Events model, final int position) {
+
                 viewHolder.setEventName(model.getEventname());
                 viewHolder.setEventDate(model.getEventdate());
-                eventref = getRef(position);
                 viewHolder.eView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
