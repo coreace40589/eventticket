@@ -42,6 +42,7 @@ public class Eventdetail extends AppCompatActivity {
                 eventNameTxt.setText("Event Name : "+eventname);
                 eventDateTxt.setText("Date : "+eventdate);
             }
+            
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.d("","Data not Exist/Error :"+databaseError);
